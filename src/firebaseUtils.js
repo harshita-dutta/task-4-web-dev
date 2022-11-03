@@ -78,7 +78,6 @@ onAuthStateChanged(auth, (user) => {
     document.querySelector("#first-content").style["display"] = "none";
     $ajaxUtils.sendGetRequest("mainpage.html", 
     function (res) {
-      console.log(res);
       document.querySelector("#content").innerHTML = res;}
       ,false);
   }
@@ -97,3 +96,9 @@ document.getElementById("login").onclick = function(){
   signupform.style["display"] = "none";
   loginForm.style["display"] = "flex";
 }
+
+// Form
+document.getElementById("content").addEventListener("click",(e)=>{
+    console.log(e.composedPath()[0])
+    e.composedPath()[0].getElementById("other").textContent = "AAAAA";
+})
