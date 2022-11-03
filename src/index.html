@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Firebase 9</title>
+    <title> Task - 4</title>
 </head>
 <body>
-<!--   
+  
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -28,7 +28,7 @@
             <a class="nav-link" href="#">FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="#" id="logout">Logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"> Light Mode</a>
@@ -40,10 +40,15 @@
       </div>
     </div>
   </nav>
-   -->
 
-   
-    <div id="logincontent">
+  <br>
+    <div id="first-content">
+      <div class="btn-group container-fluid" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" id="signup"> New User? Sign Up here!</button>
+        <button type="button" class="btn btn-success" id="login"> Sign In to your Account!</button>
+      </div>
+      <br>
+      <br>
       <form class="login">
         <h3>Sign In to your Account!</h3>
         <div class="mb-3">
@@ -57,10 +62,25 @@
         </div>
         <button type="submit" class="btn btn-primary" id="finalsubmit">Sign In</button>
       </form>
-      <button type="submit" class="btn btn-primary" id="logout"> Logout</button>
-
-    <br>
+    <form class="signup">
+      <h3>New User? Sign Up here!</h3>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="Password1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="Password2">
+      </div>
+      <button type="submit" class="btn btn-primary" id="finalsubmit">Sign Up</button>
+    </form>
     </div>
+    
     
     <div id="content"></div>
 </body>

@@ -7,18 +7,21 @@ h1{
     text-align: center;
 }
 
-.login,.signup,#logout{
+#first-content{
    width: 50%;
    position: relative;
    left: 25%;
 }
+.signup,.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signup{
+    display: none;
+}
 
 
 nav li{
-    margin-left: 5%;
-}
-#logout{
-    width: 20%;
-    position: relative;
-    left: 50%;
+    margin-left: 10px;
 }

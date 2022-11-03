@@ -12,12 +12,16 @@ module.exports = {
         template: './src/index.html' 
       }),
       new HtmlWebpackPlugin({
-        filename:'otherinfo.html', 
-        template: './src/otherinfo.html' 
+        filename:'mainpage.html', 
+        template: './src/mainpage.html' 
       }),
       new HtmlWebpackPlugin({
-        filename:'login.html', 
-        template: './src/login.html' 
+        filename:'passpage.html', 
+        template: './src/passpage.html' 
+      }),
+      new HtmlWebpackPlugin({
+        filename:'eventform.html', 
+        template: './src/eventform.html' 
       })
       // Add your html file plugin for specific files here
       ],
