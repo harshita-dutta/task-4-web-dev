@@ -6,11 +6,12 @@ body{
 h1{
     text-align: center;
 }
-
 #first-content{
-   width: 50%;
+   width: 40%;
    position: relative;
-   left: 25%;
+   left: 30%;
+   padding: 2%;
+   border: 1px solid black;
 }
 .signup,.login{
     display: flex;

@@ -5,6 +5,7 @@ import  "./ajaxUtils"
 import { initializeApp } from 'firebase/app'
 import {collection,doc,getDoc,getDocs,getFirestore,onSnapshot,query,where} from 'firebase/firestore'
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { createAlert } from "./ajaxUtils"
 
 
 // Add your config here
@@ -25,8 +26,10 @@ const logoutButton = document.querySelector('#logout')
 logoutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
-      alert('user signed out')
+      alert("Logged Out");
       document.location.reload();
+      document.location.href = "index.html";
+      
     })
     .catch(err => {
       console.log(err.message)
@@ -65,7 +68,6 @@ loginForm.addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(cred => {
       loginForm.reset();
-      pageLoader();
     })
     .catch(err => {
       console.log(err.message)
@@ -75,30 +77,21 @@ loginForm.addEventListener('submit', (e) => {
 // subscribing to auth changes
 onAuthStateChanged(auth, (user) => {
   if(user!=null){
-    document.querySelector("#first-content").style["display"] = "none";
-    $ajaxUtils.sendGetRequest("mainpage.html", 
-    function (res) {
-      document.querySelector("#content").innerHTML = res;}
-      ,false);
-  }
-  else{
-    console.log("NO USER")
+    document.location.href = "mainpage.html";
   }
 })
-
-
-document.getElementById("signup").onclick = function(){
+var signup =document.getElementById("signup");
+var login = document.getElementById("login");
+signup.onclick = function(){
   signupform.style["display"] = "flex";
   loginForm.style["display"] = "none";
+  signup.className = "btn btn-info";
+  login.className = "btn btn-secondary";
 }
 
-document.getElementById("login").onclick = function(){
+login.onclick = function(){
   signupform.style["display"] = "none";
   loginForm.style["display"] = "flex";
+  signup.className = "btn btn-secondary";
+  login.className = "btn btn-info";
 }
-
-// Form
-document.getElementById("content").addEventListener("click",(e)=>{
-    console.log(e.composedPath()[0])
-    e.composedPath()[0].getElementById("other").textContent = "AAAAA";
-})

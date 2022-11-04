@@ -37,3 +37,11 @@ global.$ajaxUtils = ajaxUtils;
 
 }(window));
 
+export var createAlert = function (string){
+  var alertDiv = document.createElement("div");
+  alertDiv.className = "alert alert-success";
+  alertDiv.textContent = string;
+  document.getElementById("content").appendChild(alertDiv);
+  return alertDiv;
+};
+
