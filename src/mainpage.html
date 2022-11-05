@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task - 4</title>
+    <style>
+      .carousel{
+        width: 50%;
+      }
+    
+      .qna-section{
+        width: 80%;
+        position: relative;
+        left: 10%;
+      }
+      h3{
+        text-align: center;
+      }
+      .history{
+        width: 40%;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1663525261/Gravitas_1_2_vh01l1.png" alt="" >
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About RoboVITics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Light Mode</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="content">
+<a href="#myModal" class="btn btn-lg btn-success" data-bs-toggle="modal" id="register">Register Now!</a>
+  
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+      <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Registration</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      <form action="" class="register">
+        <div class="collegeName" id="coln">
+          <label for="heading">Select College: </label>
+          <br>
+          <div class="options">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="college" id="vit" value="VIT" checked>
+                  <label class="form-check-label" for="vit">
+                    VIT
+                  </label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="college" id="other" value="OTHER">
+                  <label class="form-check-label" for="other">
+                    Other 
+                  </label>
+              </div>
+          </div>
+        </div>
+        <div class="inputFields">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name </label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Type your full name">
+              </div>
+        </div>
+        <div class="inputFields">    
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+              </div>
+        </div>
+        <div class="inputFields">
+            <label for="phNoInput" class="form-label">Phone Number</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">+91</span>
+                <input type="tel" name="phoneNumber" id="phNoInput" aria-label="Mobile Number" class="form-control" required>
+            </div>
+        </div>
+    </form>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-primary" id="submit">Register</button>
+    </div>
+    </div>
+          
+      </div>
+  </div>
+
+
+<!-- Banner goes here -->
+<div class="banner">
+<h1> Harshita <br>
+  Banner goes here</h1>
+</div>
+<!-- History of the upcoming event (banner one). -->
+<h3>History of Robowars</h3>
+<center>
+<div class="history">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat quia repellat vel iure modi consectetur minima possimus accusamus? Eaque sit atque quasi et labore inventore quisquam libero, odit vitae!
+</center>
+</div>
+<br>
+<!-- Momentos ( Photo Carousal, take photos from Firebase). -->
+<h3>Carousal </h3>
+<center>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914168/sample.jpg" class="d-block w-100" alt="...">
+</div>
+<div class="carousel-item">
+<img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914194/cld-sample-4.jpg" class="d-block w-100" alt="...">
+</div>
+<div class="carousel-item">
+<img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914193/cld-sample-2.jpg" class="d-block w-100" alt="...">
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</center>
+<br>
+<!-- A simple Ask a doubt Section, displaying the top 6 asked questions about the upcoming event. -->
+<h3>Get the answers to your questions!</h3>
+<div class="qna-section">
+<div class="qna">
+Question 1 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a> </span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veritatis velit harum rerum recusandae veniam fugiat vitae corrupti sunt corporis facere, iure obcaecati quis eius voluptates placeat consectetur, maiores a?</p>
+</div>
+<div class="qna">
+Question 2 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas eveniet unde sint corporis ipsam natus debitis quos deleniti, blanditiis doloremque perspiciatis aliquid molestias minus, consectetur dicta minima commodi! Rerum.</p>
+</div>
+<div class="qna">
+Question 3 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a> </span>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus repudiandae adipisci corporis tempora minima aperiam voluptatibus, deserunt pariatur accusantium totam sint culpa voluptate. Maiores eum porro, itaque quas unde similique.</p>
+</div>
+<div class="qna">
+Question 4 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore praesentium sint reiciendis nisi facere! Error, autem dignissimos saepe repellat ipsa ipsam dolores magni tenetur officia magnam porro, excepturi unde fugiat.</p>
+</div>
+<div class="qna">
+Question 5 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis harum, laboriosam explicabo, provident ipsa delectus rerum aspernatur ea nostrum consectetur deleniti. Laudantium provident nostrum nulla necessitatibus repudiandae voluptas explicabo nam.</p>
+</div>
+<div class="qna">
+Question 6 <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dignissimos odio quae eos cum sunt! Animi ab dolorum impedit, recusandae magni nam dolorem ipsam tenetur expedita dolore. Aliquid, nam. Beatae.</p>
+</div>
+</div>
+
+
+<!-- Make a more events section : -->
+<!-- Should contain the list the recent events sorted in order of their dates (Get the data from FB) -->
+
+<div class="more-events">
+<center>
+<h3>Some of our other events!</h3>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02nUF7DA2LQXYWf7wwCRFcyUgbqsH9ZsxSUPichR2ckBpoHdkEiMWLXX7BvXADj1opl&show_text=true&width=500" width="500" height="654" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<span></span>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02nUF7DA2LQXYWf7wwCRFcyUgbqsH9ZsxSUPichR2ckBpoHdkEiMWLXX7BvXADj1opl&show_text=true&width=500" width="500" height="654" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</center>
+</div>
+
+  
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script>
+     const firebaseConfig = firebase.initializeApp({
+    apiKey: "AIzaSyB5dz82Olwh6Gezuw9GAsqIZesgOVTDCWg",
+    authDomain: "events-59546.firebaseapp.com",
+    projectId: "events-59546",
+    storageBucket: "events-59546.appspot.com",
+    messagingSenderId: "397686800845",
+    appId: "1:397686800845:web:2c6923eb39003f8d754484",
+    measurementId: "G-B6N0NF8RG1"
+  });
+  const db = firebaseConfig.firestore();
+const auth = firebaseConfig.auth();
+</script>
+<script>
+    let count=0;
+    let x=0;
+    let r;
+    let p;
+    document.getElementById("other").onclick=function()
+    {
+        count=count+1;
+        if(count<=1)
+        {
+        let g = document.createElement("div");
+        g.className = "mb-3";
+        r=document.createElement("input");
+        r.id="x";
+        r.className = "form-control"
+        r.type="text";
+        r.placeholder="Enter the college name";
+        g.appendChild(r);
+        document.getElementById("coln").appendChild(g);
+        
+        }
+    }
+    document.getElementById("vit").onclick=function()
+    {
+        count=0;
+       document.getElementById("x").remove();
+       p="VIT";
+    }
+    document.getElementById("submit").onclick=function()
+    {
+        if(document.getElementById("nameInput").value=="" || document.getElementById("emailInput").value==""|| document.getElementById("phNoInput").value=="")
+        {
+            alert("Please enter all values");
+        }
+        else
+        {
+    let a=document.getElementById("nameInput").value;
+    let b=document.getElementById("emailInput").value;
+    let c=document.getElementById("phNoInput").value;
+    if(document.getElementById("vit").checked)
+    {
+        p="VIT";
+    }
+    else
+    {
+        p=document.getElementById("x").value;
+    }
+    db.collection("Reg").add({
+        Name:a,
+        Email:b,
+        PhoneNumber:c,
+        CollegeName:p
+    }).then((docref)=>
+    {
+        document.getElementById("nameInput").value="";
+        document.getElementById("emailInput").value="";
+        document.getElementById("phNoInput").value="";
+        if(document.getElementById("x") == null){
+            console.log("Its null")
+        }
+        else{
+        document.getElementById("x").value="";
+        }
+        console.log("Information Saved");
+        alert("Thank you for registering");
+
+    })
+    .catch((error)=>
+    {
+        console.error("Error",error);
+    })
+    }
+}
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
