@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Quantico:wght@400;700&family=Redressed&display=swap" rel="stylesheet">
+    <style>
+        .register,#submit{
+            position: relative;
+            left:25%;
+            width:50%;
+        }
+        #submit{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+</body>
+    <h1>
+        Registration form
+    </h1>
+    <form action="" class="register">
+        <div class="collegeName" id="coln">
+          <label for="heading">Select College: </label>
+          <br>
+          <div class="options">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="college" id="vit" value="VIT" checked>
+                  <label class="form-check-label" for="vit">
+                    VIT
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="college" id="other" value="OTHER" onclick="x()">
+                  <label class="form-check-label" for="other">
+                    Other 
+                  </label>
+                </div>
+                
+          </div>
+      </div>
+        
+        <div class="inputFields">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name </label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Type your full name">
+              </div>
+        </div>
+        <div class="inputFields">    
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+              </div>
+
+        </div>
+        <div class="inputFields">
+            <label for="phNoInput" class="form-label">Phone Number</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">+91</span>
+                <input type="tel" name="phoneNumber" id="phNoInput" aria-label="Mobile Number" class="form-control" required>
+            </div>
+
+        </div>
+    </form>
+    <br>
+    <br> 
+    <a href="#myModal" class="btn btn-primary" data-bs-toggle="modal" id="submit">Register Now!</a>
+    <div id="myModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false"> 
+        <div class="modal-dialog">
+            <div class="modal-content">
+          <div class="modal-header">
+                    <h6 class="modal-title"> Thank you for registering!</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+      
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="formUtils.js"></script>
+</html>

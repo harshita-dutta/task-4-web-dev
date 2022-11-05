@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // Entry point:
-    entry: "./src/firebaseUtils.js",
+    // entry: "./src/js/firebaseUtils.js",
+    entry: {
+      firebaseUtils: './src/js/firebaseUtils.js',
+      formUtils: './src/js/formUtils.js',
+    },
 
     //  Plugins
     plugins: [
@@ -13,15 +17,15 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
         filename:'mainpage.html', 
-        template: './src/mainpage.html' 
+        template: './src/templates/mainpage.html' 
       }),
       new HtmlWebpackPlugin({
         filename:'passpage.html', 
-        template: './src/passpage.html' 
+        template: './src/templates/passpage.html' 
       }),
       new HtmlWebpackPlugin({
         filename:'eventform.html', 
-        template: './src/eventform.html' 
+        template: './src/templates/eventform.html',
       })
       // Add your html file plugin for specific files here
       ],
