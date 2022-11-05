@@ -1,8 +1,6 @@
-body{
-    color: white;
-}
 
 main{
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
