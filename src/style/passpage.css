@@ -1,0 +1,56 @@
+body{
+    color: white;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-box{
+    border: solid 2px  black;
+    width: 80vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.right-side, .left-side{
+    background-color: aquamarine;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right-side p{
+
+    transform-origin: 50 0;
+    transform: rotate(90deg);
+}
+
+.center{
+    background-color: rgb(207, 255, 238);
+    display: grid;
+    grid-template-rows: 50% 25% 25%;
+}
+
+.event-name{
+    background-color: antiquewhite;
+}
+
+.token{
+    background-color: rgb(173, 141, 100);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.token-title{
+    background-color: rgb(49, 41, 28);
+}
+
+.timer{
+    background-color: antiquewhite;
+}
