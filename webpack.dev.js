@@ -8,7 +8,6 @@ module.exports = merge(common,{
     // Output point:
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: '[name].[contenthash].js',
-        clean:true,
+        filename: '[name].js',
     },
 }) 

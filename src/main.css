@@ -22,7 +22,29 @@ h1{
     display: none;
 }
 
-
 nav li{
     margin-left: 10px;
 }
+
+.carousel{
+    width: 50%;
+  }
+
+  .qna-section{
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  h3{
+    text-align: center;
+  }
+  .history{
+    width: 40%;
+    text-align: center;
+  }
+
+  #content{
+    position: relative;
+    width: 75%;
+    left: 12.5%;
+  }

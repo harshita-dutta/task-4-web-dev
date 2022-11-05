@@ -1,41 +1,25 @@
-import "./main.css"
-import 'bootstrap'
+import "./firebaseUtils"
 import  "./ajaxUtils"
+import "../main.css"
 
-import { initializeApp } from 'firebase/app'
-import {collection,doc,getDoc,getDocs,getFirestore,onSnapshot,query,where} from 'firebase/firestore'
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
-import { createAlert } from "./ajaxUtils"
-
-
-// Add your config here
-const firebaseConfig = {
-    apiKey: "AIzaSyDub_7NQXQSjx6juNrfQCjM21M6IlNWuWM",
-    authDomain: "fireweb-2d408.firebaseapp.com",
-    projectId: "fireweb-2d408",
-    storageBucket: "fireweb-2d408.appspot.com",
-    messagingSenderId: "991930535994",
-    appId: "1:991930535994:web:29541a11f6b34641d52503"
-  };
-// Initialize Firebase App
-initializeApp(firebaseConfig);
-const auth = getAuth();
+import 'bootstrap'
+import "jquery"
 
 // logging in and out
+const auth = getAuth();
 const logoutButton = document.querySelector('#logout')
 logoutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
-      alert("Logged Out");
+      alert('user signed out')
       document.location.reload();
-      document.location.href = "index.html";
-      
     })
     .catch(err => {
       console.log(err.message)
     })
 })
 
+// Sign Up Form Event
 const signupform = document.querySelector('.signup');
 signupform.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -54,10 +38,11 @@ signupform.addEventListener('submit',(e)=>{
           signupform.reset(); 
         })
         .catch((err)=>{
-            alert(err.message);
+            createAlert(err.message,"alert-danger");
         })
 })
 
+// Sign In Form Event
 const loginForm = document.querySelector('.login')
 loginForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -70,16 +55,18 @@ loginForm.addEventListener('submit', (e) => {
       loginForm.reset();
     })
     .catch(err => {
-      console.log(err.message)
+      createAlert(err.message,"alert alert-danger");
     })
 })
 
-// subscribing to auth changes
+// Checking Login Status to allow the user
 onAuthStateChanged(auth, (user) => {
   if(user!=null){
     document.location.href = "mainpage.html";
   }
 })
+
+// Sign In and Sign Up toggle 
 var signup =document.getElementById("signup");
 var login = document.getElementById("login");
 signup.onclick = function(){
