@@ -313,3 +313,15 @@ footer{
   background-color: #9bac83;
   height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    #first-content{
+        width: 80%;
+        left: 10%;
+        padding: 20px;
+    }
+    .carousel {
+      width: 50%;
+    }
+  
+}
