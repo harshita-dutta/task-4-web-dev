@@ -111,6 +111,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-size: 26px;
 }
 
 .token-number p{
@@ -141,7 +142,12 @@
     }
 
     .token{
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .token-title{
+        line-height: -1%;
+
     }
 
     .token-number p{
@@ -161,5 +167,9 @@
 
     .right-side, .left-side{
         display: none;
+    }
+
+    .token-title{
+        height: 80%;
     }
 }

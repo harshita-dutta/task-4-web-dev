@@ -46,7 +46,7 @@
             }
           </script>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link register-button" href="#" >Register</a>
           </li>
 
           <li class="nav-item">
@@ -145,19 +145,17 @@
     </div>
   </div>
 
-  <br>
-  <br>
   <!-- History of the upcoming event (banner one). -->
-  <h3>History of Robowars</h3>
-  <center>
-  <div class="history">
-    <p>ROBOWARS is the flagship event of graVITas and one of the biggest combat robotics events in India. More than 40 bots engage in thrilling battles around-the-clock in the largest and safest arena in India for a chance to win the championship with their war machines. It proves to be an adrenaline rush to the participants as well as the audience. Teams all over the globe gather here to show off their fighting spirits and attain glory.  </center>
-    </p>
-  </div>
 
+<div class="history">
+  <h3 class="history-head">ROBOVITICS</h3>
+  <div class="history-des">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+  </div>
+</div>
 <!-- Momentos ( Photo Carousal, take photos from Firebase). -->
-<br>
-  <h3>Media </h3>
+<div class="media">
+  <h3 class="media-head">MEDIA </h3>
   <center>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -186,75 +184,79 @@
   </button>
   </div>
   </center>
-<br>
+</div>
+
 
 
 <!-- A simple Ask a doubt Section, displaying the top 6 asked questions about the upcoming event. -->
-<h3>Some frequently asked question!</h3>
+<div class="faq-main">
+<h3 class="faq-head">FAQs</h3>
 <div class="faq">
   <div class="faq-box">
     <div class="quest">
-      <p>Q) When and where is Robowars happening?</p>
+      <p>When and where is Robowars happening?</p>
     </div>
     <div class="ans">
-      <p>Ans) Robowars will be happening during Gravitas and will be from
+      <p>Robowars will be happening during Gravitas and will be from
         30th sep to 2nd oct at the Outdoor stadium.Stay tuned for the
         timings!</p>
     </div>
   </div>
   <div class="faq-box">
     <div class="quest">
-      <p>Q) No. of teams participating?</p>
+      <p>No. of teams participating?</p>
     </div>
     <div class="ans">
       <p>
-        Ans) 40
+        40 teams will be participating this year!
       </p>
     </div>
   </div>
   <div class="faq-box">
     <div class="quest">
-      <p>Q) How can you attend this event?</p>
+      <p>How can you attend this event?</p>
     </div>
     <div class="ans">
       <p>
-        Ans) Go to Gravitas website and search for robowars and register
+        Go to Gravitas website and search for robowars and register
           for the event!
       </p>
     </div>
   </div>
   <div class="faq-box">
     <div class="quest">
-      <p>Q) Who is eligible to participate?</p>
+      <p>Who is eligible to participate?</p>
     </div>
     <div class="ans">
       <p>
-        Ans) If you're a part of a team that builds bots and bots follow
+        If you're a part of a team that builds bots and bots follow
           our regulations
       </p>
     </div>
   </div>
   <div class="faq-box">
     <div class="quest">
-      <p>Q) How long does each match usually last?</p>
+      <p>How long does each match usually last?</p>
     </div>
     <div class="ans">
       <p>
-        Ans) 3 minutes each
+        3 minutes each
       </p>
     </div>
   </div>
   <div class="faq-box">
     <div class="quest">
-      <p>Q) What is the team size for each time?</p>
+      <p>What is the team size for each time?</p>
     </div>
     <div class="ans">
       <p>
-        Ans) 7-12
+        7-12
       </p>
     </div>
   </div>
 </div>
+</div>
+
 <script>
   let answers=document.querySelectorAll(".faq-box");
   answers.forEach((event)=>{
@@ -269,17 +271,22 @@
   })
 </script>
 
+
+
 <!-- Make a more events section : -->
 <!-- Should contain the list the recent events sorted in order of their dates (Get the data from FB) -->
 
 <div class="more-events">
-<center>
-<h3>Some of our other events!</h3>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02mHSqq4aRmRi7vwmb4esBsbN5DBZHj7qi2tEHVeWojVf2uRi29CCiNr8NVzRfdHxyl&show_text=false&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02Jen61Hy1552dU7safkgKTcDSKzfWw4LdY3tN3TRNFXM5BKMb2XgpBLKWMpZdADKCl&show_text=false&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-</center>
-</div>
 
+<h3 class="more-events-head">other events</h3>
+
+<div class="event-posts">
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02mHSqq4aRmRi7vwmb4esBsbN5DBZHj7qi2tEHVeWojVf2uRi29CCiNr8NVzRfdHxyl&show_text=false&width=500" 
+class="post" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02Jen61Hy1552dU7safkgKTcDSKzfWw4LdY3tN3TRNFXM5BKMb2XgpBLKWMpZdADKCl&show_text=false&width=500" class="post" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+</div>
   
 </body>
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

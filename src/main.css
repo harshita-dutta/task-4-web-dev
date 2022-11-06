@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  background-color: #eae7dc;
+  background-color: #d3e4bd;
 }
 
 h1 {
@@ -37,13 +37,33 @@ nav li {
   position: relative;
   left: 10%;
 }
-h3 {
+/* h3 {
   text-align: center;
   margin-bottom: 20px;
-}
+} */
 .history {
-  width: 80%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #9bac83;
+}
+
+.history-head{
+  
+  letter-spacing: 6px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.history-des{
+  border: 2px solid #d3e4bd;
+  padding: 2% 2% 2% 2%;
 }
 
 #content {
@@ -52,10 +72,28 @@ h3 {
   left: 12.5%;
 }
 
+.media{
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+.media-head{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: sans-serif;
+  width: fit-content;
+  border-bottom: 2px solid #9bac83;
+}
+
 /* for banner */
 .banner {
   /* background-color: rgb(196, 166, 120); */
-  background-color: #d8c3a5;
+
   width: 100%;
   height: 50%;
   display: flex;
@@ -66,7 +104,7 @@ h3 {
 }
 
 .banner-box {
-  border: 1px solid black;
+  border: 1px solid #9bac83;
   width: 90%;
   height: 40%;
   margin-top: 1%;
@@ -113,7 +151,7 @@ h3 {
   text-decoration: none;
   font-weight: 600;
   color: white;
-  background-color: black;
+  background-color: #9bac83;
   text-transform: uppercase;
 }
 
@@ -123,18 +161,41 @@ h3 {
 }
 
 /* faq css */
+.faq-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9bac83;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.faq-head{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: sans-serif;
+  width: fit-content;
+  border-bottom: 2px solid #d3e4bd;
+
+}
+
 .faq {
-  width: 700px;
-  margin-left: 21%;
+  width: 100%;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .faq-box {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #e98074;
+  background: #d3e4bd;
   border-radius: 10px;
-  width: 125%;
+  width: 80%;
 }
 .quest p {
   margin: 5px;
@@ -146,7 +207,7 @@ h3 {
   padding: 10px;
   font-size: large;
   color: rgb(255, 255, 255);
-  background: #e85a4f;
+  background: #9bac83;
   border-radius: 10px;
 }
 .faq-box:hover {
@@ -157,6 +218,45 @@ h3 {
 }
 .faq-box.active .ans {
   display: block;
+}
+
+.more-events{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 2%;
+
+}
+
+.more-events-head{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: sans-serif;
+  width: fit-content;
+  border-bottom: 2px solid #9bac83;
+  text-transform: uppercase;
+
+  
+}
+
+.event-posts{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5%;
+  padding-top: 2%;
+  height: 50vh;
+}
+
+.post{
+  width: 30vw;
+  height: 60vh;
 }
 
 /* navbar */
@@ -176,4 +276,21 @@ h3 {
 /* dark mode */
 .dark {
   background-color: #4c3575;
+}
+
+
+@media only screen and (max-width: 600px){
+  .event-posts{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    height: 70vh;
+
+  }
+}
+
+footer{
+  background-color: #9bac83;
+  height: 100%;
 }
