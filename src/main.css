@@ -1,57 +1,61 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
-body{
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: #eae7dc;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-#first-content{
-   width: 40%;
-   position: relative;
-   left: 30%;
-   padding: 2%;
-   border: 1px solid black;
+#first-content {
+  width: 40%;
+  position: relative;
+  left: 30%;
+  padding: 2%;
+  border: 1px solid black;
 }
-.signup,.login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.signup,
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.signup{
-    display: none;
-}
-
-nav li{
-    margin-left: 10px;
+.signup {
+  display: none;
 }
 
-.carousel{
-    width: 50%;
-  }
+nav li {
+  margin-left: 10px;
+}
 
-  .qna-section{
-    width: 80%;
-    position: relative;
-    left: 10%;
-  }
-  h3{
-    text-align: center;
-  }
-  .history{
-    width: 40%;
-    text-align: center;
-  }
+.carousel {
+  width: 50%;
+}
 
-  #content{
-    position: relative;
-    width: 75%;
-    left: 12.5%;
-  }
+.qna-section {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.history {
+  width: 80%;
+  text-align: center;
+}
+
+#content {
+  position: relative;
+  width: 75%;
+  left: 12.5%;
+}
 
 /* for banner */
-.banner{
-  background-color: rgb(196, 166, 120);
+.banner {
+  /* background-color: rgb(196, 166, 120); */
+  background-color: #d8c3a5;
   width: 100%;
   height: 50%;
   display: flex;
@@ -61,7 +65,7 @@ nav li{
   padding: 2% 0% 2% 0%;
 }
 
-.banner-box{
+.banner-box {
   border: 1px solid black;
   width: 90%;
   height: 40%;
@@ -71,7 +75,7 @@ nav li{
   grid-template-columns: 70% 30%;
 }
 
-.event-description{
+.event-description {
   /* border: 2px solid blue; */
   padding-left: 3%;
   padding-right: 2%;
@@ -80,11 +84,7 @@ nav li{
   gap: 5%;
 }
 
-.text{
-/* border: 2px solid black; */
-}
-
-.text-head{
+.text-head {
   font-size: 26px;
   font-weight: 700;
   /* border: 2px solid brown; */
@@ -92,22 +92,22 @@ nav li{
   /* margin-bottom: -0.5%; */
 }
 
-.text-description{
+.text-description {
   font-size: 16px;
 }
 
-.text-description span{
+.text-description span {
   font-weight: 700;
   padding-top: 1%;
 }
 
-.event-button{
+.event-button {
   /* border: 2px solid brown; */
   margin-bottom: 2%;
   padding-top: 2%;
 }
 
-.event-button a{
+.event-button a {
   /* border: 1px solid blueviolet; */
   padding: 1% 2% 1% 2%;
   text-decoration: none;
@@ -115,10 +115,65 @@ nav li{
   color: white;
   background-color: black;
   text-transform: uppercase;
-
 }
 
-.event-logo img{
- width: 100%;
- height: 100%;
+.event-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* faq css */
+.faq {
+  width: 700px;
+  margin-left: 21%;
+  margin-bottom: 30px;
+}
+.faq-box {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #e98074;
+  border-radius: 10px;
+  width: 125%;
+}
+.quest p {
+  margin: 5px;
+  padding: 0;
+  font-size: 20px;
+}
+.ans p {
+  margin: 5px;
+  padding: 10px;
+  font-size: large;
+  color: rgb(255, 255, 255);
+  background: #e85a4f;
+  border-radius: 10px;
+}
+.faq-box:hover {
+  cursor: pointer;
+}
+.ans {
+  display: none;
+}
+.faq-box.active .ans {
+  display: block;
+}
+
+/* navbar */
+.nav-link a#home-but {
+  color: #8e8d8a;
+}
+
+a#home-but {
+  color: #8e8d8a;
+}
+
+/* heading */
+h3 {
+  font-weight: 300;
+}
+
+/* dark mode */
+.dark {
+  background-color: #4c3575;
 }

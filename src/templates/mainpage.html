@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Task - 4</title>
     <link rel="stylesheet" href="/src/style/banner.css">
+    <link rel="stylesheet" href="/src/style/faq.css">
 </head>
-<body>
+<body id = "mode" class="light">
   
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -20,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" id="home-but" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About RoboVITics</a>
@@ -29,9 +30,21 @@
             <a class="nav-link" href="#">FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Light Mode</a>
+            <a class="nav-link" id="modeText" href="#" onclick="mode();"> Light Mode</a>
           </li>
-
+          <script>
+            function mode() {
+              const element = document.getElementById("mode");
+              const text = document.getElementById("modeText");
+              if (element.className == "light") {
+                element.className = "dark";
+                text.innerText = "Dark Mode";
+              } else {
+                element.className = "light";
+                text.innerText = "Light Mode";
+              }
+            }
+          </script>
           <li class="nav-item">
             <a class="nav-link" href="#">Register</a>
           </li>
@@ -61,7 +74,7 @@
 
         <div class="text">
           <p class="text-head">
-            Event Heading - 1
+            ROBOWARS
           </p>
           <p class="text-description">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took <br> <span class="countdown"> DATE: 2nd December 2022 </span>
@@ -87,7 +100,7 @@
 
         <div class="text">
           <p class="text-head">
-            Event Heading - 1
+            HANDS ON ROBOTICS
           </p>
           <p class="text-description">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<br> <span class="countdown"> DATE: 2nd December 2022 </span>
@@ -113,7 +126,7 @@
 
         <div class="text">
           <p class="text-head">
-            Event Heading - 1
+            MACHINE DESIGN with FUSION 360
           </p>
           <p class="text-description">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<br> <span class="countdown"> DATE: 2nd December 2022 </span>
@@ -138,15 +151,13 @@
   <h3>History of Robowars</h3>
   <center>
   <div class="history">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat quia repellat vel iure modi consectetur minima possimus accusamus? Eaque sit atque quasi et labore inventore quisquam libero, odit vitae!
-  </center>
+    <p>ROBOWARS is the flagship event of graVITas and one of the biggest combat robotics events in India. More than 40 bots engage in thrilling battles around-the-clock in the largest and safest arena in India for a chance to win the championship with their war machines. It proves to be an adrenaline rush to the participants as well as the audience. Teams all over the globe gather here to show off their fighting spirits and attain glory.  </center>
+    </p>
   </div>
-
-
 
 <!-- Momentos ( Photo Carousal, take photos from Firebase). -->
 <br>
-  <h3>Carousal </h3>
+  <h3>Media </h3>
   <center>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -179,40 +190,84 @@
 
 
 <!-- A simple Ask a doubt Section, displaying the top 6 asked questions about the upcoming event. -->
-<h3>Get the answers to your questions!</h3>
-<div class="qna-section">
-<div class="qna">
-Question 1 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a> </span>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veritatis velit harum rerum recusandae veniam fugiat vitae corrupti sunt corporis facere, iure obcaecati quis eius voluptates placeat consectetur, maiores a?</p>
+<h3>Some frequently asked question!</h3>
+<div class="faq">
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) When and where is Robowars happening?</p>
+    </div>
+    <div class="ans">
+      <p>Ans) Robowars will be happening during Gravitas and will be from
+        30th sep to 2nd oct at the Outdoor stadium.Stay tuned for the
+        timings!</p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) No. of teams participating?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Ans) 40
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) How can you attend this event?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Ans) Go to Gravitas website and search for robowars and register
+          for the event!
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) Who is eligible to participate?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Ans) If you're a part of a team that builds bots and bots follow
+          our regulations
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) How long does each match usually last?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Ans) 3 minutes each
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Q) What is the team size for each time?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Ans) 7-12
+      </p>
+    </div>
+  </div>
 </div>
-<div class="qna">
-Question 2 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas eveniet unde sint corporis ipsam natus debitis quos deleniti, blanditiis doloremque perspiciatis aliquid molestias minus, consectetur dicta minima commodi! Rerum.</p>
-</div>
-<div class="qna">
-Question 3 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a> </span>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus repudiandae adipisci corporis tempora minima aperiam voluptatibus, deserunt pariatur accusantium totam sint culpa voluptate. Maiores eum porro, itaque quas unde similique.</p>
-</div>
-<div class="qna">
-Question 4 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore praesentium sint reiciendis nisi facere! Error, autem dignissimos saepe repellat ipsa ipsam dolores magni tenetur officia magnam porro, excepturi unde fugiat.</p>
-</div>
-<div class="qna">
-Question 5 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis harum, laboriosam explicabo, provident ipsa delectus rerum aspernatur ea nostrum consectetur deleniti. Laudantium provident nostrum nulla necessitatibus repudiandae voluptas explicabo nam.</p>
-</div>
-<div class="qna">
-Question 6 <br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dignissimos odio quae eos cum sunt! Animi ab dolorum impedit, recusandae magni nam dolorem ipsam tenetur expedita dolore. Aliquid, nam. Beatae.</p>
-</div>
-</div>
-
+<script>
+  let answers=document.querySelectorAll(".faq-box");
+  answers.forEach((event)=>{
+      event.addEventListener('click',()=>{
+          if(event.classList.contains("active")){
+              event.classList.remove("active");
+          }
+          else{
+              event.classList.add("active");
+          }
+      })
+  })
+</script>
 
 <!-- Make a more events section : -->
 <!-- Should contain the list the recent events sorted in order of their dates (Get the data from FB) -->
@@ -236,16 +291,3 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit? <span><a>Show</a></span
   </div>
 </footer>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
