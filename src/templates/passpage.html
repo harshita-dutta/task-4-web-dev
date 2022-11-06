@@ -26,7 +26,7 @@
                         <p>TOKEN<br>NUMBER</p>
                     </div>
 
-                    <div class="token-number">
+                    <div class="token-number" id="token">
                         <p>1234567890</p>
                     </div>
 
@@ -44,4 +44,10 @@
         </div>
     </main>    
 </body>
+<script>
+let tokenDiv = document.getElementById("token");
+    if(tokenDiv){
+        tokenDiv.innerHTML = "<p>"+ window.localStorage.PassId+ "</p>";
+    }
+</script>
 </html>
