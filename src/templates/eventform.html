@@ -9,18 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Quantico:wght@400;700&family=Redressed&display=swap" rel="stylesheet">
     <style>
-        .register,#submit{
+        .register,#submit,#fallback{
             position: relative;
             left:25%;
             width:50%;
         }
-        #submit{
-            width: 50%;
-        }
+        
     </style>
 </head>
 <body>
-</body>
     <h1>
         Registration form
     </h1>
@@ -69,7 +66,12 @@
     </form>
     <br>
     <br> 
-    <a href="#myModal" class="btn btn-primary" data-bs-toggle="modal" id="submit">Register Now!</a>
+    <div class="d-grid gap-2">
+        <button href="#myModal" class="btn btn-primary" data-bs-toggle="modal" id="submit">Register Now!</button>
+        <button class="btn btn-primary" id="fallback" href="mainpage.html">Return to mainpage</button>
+      </div>
+    
+    
     <div id="myModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false"> 
         <div class="modal-dialog">
             <div class="modal-content">
@@ -81,6 +83,7 @@
             </div>
         </div>
     </div>
+    
     
 </body>
 <script src="formUtils.js"></script>

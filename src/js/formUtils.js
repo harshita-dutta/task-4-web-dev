@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import {addDoc, collection,getFirestore} from 'firebase/firestore'
+import {addDoc,doc, setDoc, collection,getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = initializeApp({
     apiKey: "AIzaSyB5dz82Olwh6Gezuw9GAsqIZesgOVTDCWg",
@@ -11,11 +11,20 @@ const firebaseConfig = initializeApp({
     measurementId: "G-B6N0NF8RG1"
   });
 
-const db = getFirestore();
-const colRef = collection(db,"Reg");
+function rand() {
+    const s = '123456789abcdefghijklmnopqrstuvwxyz';
+    var pass = '';
+    for (var i = 0; i < 8; i++) {
+        pass += s[Math.floor(Math.random() * s.length)];
+    }
+    console.log(pass);
+    return pass;
+    
+}
 
+const db = getFirestore();
 let count=0;
-    let x=0;
+    
     let r;
     let p;
     document.getElementById("other").onclick=function()
@@ -65,7 +74,15 @@ let count=0;
             {
                 p=document.getElementById("x").value;
             }
-            addDoc(colRef,{Name:a,Email:b,PhoneNumber:c, CollegeName:p})
+            let x = rand();
+            window.localStorage.x = x;
+            setDoc(doc(db, "Reg", window.localStorage.uid), {
+                Name:a,
+                Email:b,
+                PhoneNumber:c,
+                CollegeName:p,
+                PassId: x
+              })
             .then((docref)=>
             {
                 document.getElementById("nameInput").value="";
@@ -78,8 +95,6 @@ let count=0;
                 document.getElementById("x").value="";
                 }
                 console.log("Information Saved");
-                alert("Thank you for registering");
-        
             })
             .catch((error)=>
             {
@@ -88,3 +103,12 @@ let count=0;
         }
    
     }
+
+let fallback = document.getElementById("fallback")
+if(fallback){
+    fallback.addEventListener("click",()=> {
+        document.location.href = "mainpage.html"
+    })
+}
+
+

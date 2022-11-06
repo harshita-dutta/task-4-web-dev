@@ -1,5 +1,6 @@
 
-body{
+body.passpage{
+
     background-color: rgb(234, 231, 231);
     color: black;
     font-family: sans-serif;
@@ -75,6 +76,7 @@ main{
     justify-content: center;
     border-bottom: 5px solid black;;
     
+
 }
 
 .event-name p{
@@ -109,13 +111,10 @@ main{
 .token-number p{
     letter-spacing: 3px;
     font-size: 18px;
+
 }
 
-.timer{
-    
-}
-
-.timer p{
+.countdown{
     font-weight: 700;
     font-size: 28px;
 }
