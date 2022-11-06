@@ -35,7 +35,7 @@ var countdown = function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  var timers = document.querySelectorAll(".countdown");
+  var timers = document.querySelectorAll(".timer");
   timers.forEach(element => {
     element.innerHTML = "Time Remaining: "+
     days + "d " + hours + "hr(s) " + minutes + "min(s) " + seconds + "sec ";
@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     const user1 = auth.currentUser;
     if(user){
       if(user.displayName){
-        document.getElementById("logout").textContent = user1.displayName;
+        document.getElementById("username").textContent = user1.displayName;
       }
       else{
         user1.displayName = window.localStorage.username;
-        document.getElementById("logout").textContent = user1.displayName;
+        document.getElementById("username").textContent = user1.displayName;
       }
       window.localStorage.uid = user1.uid;
 

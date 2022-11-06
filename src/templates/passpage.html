@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="bannerStyle.css">
 </head>
 <body class="passpage">
-    <main class="main-pass">
+    <header>
+        
+    </header>
+    <main>
         <div class="main-box">
             <div class="right-side">
                 <p>REGISTRATION<br>SUCCESSFUL</p>
@@ -32,7 +35,7 @@
 
                 </div>
 
-                <div class="countdown timer">
+                <div class="timer">
                     <p>22hr(s) : 10min(s) : 32sec</p>
                 </div>
 
@@ -42,12 +45,23 @@
                 <p>REGISTRATION<br>SUCCESSFUL</p>
             </div>
         </div>
-    </main>    
+    </main>   
+    <br>
+    <br>
+    <br>
+    <button class="btn btn-dark" id="fallback" href="mainpage.html">Return to mainpage</button> 
+
 </body>
 <script>
 let tokenDiv = document.getElementById("token");
     if(tokenDiv){
         tokenDiv.innerHTML = "<p>"+ window.localStorage.PassId+ "</p>";
     }
+let fallback = document.getElementById("fallback")
+if(fallback){
+    fallback.addEventListener("click",()=> {
+        document.location.href = "mainpage.html"
+    })
+}
 </script>
 </html>
