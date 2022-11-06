@@ -4,19 +4,20 @@ import 'bootstrap'
 import  "./ajaxUtils"
 import "jquery"
 import { initializeApp } from 'firebase/app'
-import { doc, setDoc, getFirestore, getDoc} from 'firebase/firestore'
+import { doc, setDoc, getFirestore} from 'firebase/firestore'
 import { createUserWithEmailAndPassword,signInWithPopup, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { createAlert } from "./ajaxUtils"
 import { getDatabase } from "firebase/database";
 
 // Add your config here
 const firebaseConfig = {
-  apiKey: "AIzaSyDub_7NQXQSjx6juNrfQCjM21M6IlNWuWM",
-  authDomain: "fireweb-2d408.firebaseapp.com",
-  projectId: "fireweb-2d408",
-  storageBucket: "fireweb-2d408.appspot.com",
-  messagingSenderId: "991930535994",
-  appId: "1:991930535994:web:29541a11f6b34641d52503"
+  apiKey: "AIzaSyB5dz82Olwh6Gezuw9GAsqIZesgOVTDCWg",
+  authDomain: "events-59546.firebaseapp.com",
+  projectId: "events-59546",
+  storageBucket: "events-59546.appspot.com",
+  messagingSenderId: "397686800845",
+  appId: "1:397686800845:web:2c6923eb39003f8d754484",
+  measurementId: "G-B6N0NF8RG1"
   };
 // Initialize Firebase App
 initializeApp(firebaseConfig);
@@ -66,27 +67,20 @@ document.addEventListener("DOMContentLoaded",()=>{
 
       // Form Verification:
       const db = getFirestore();
-      const docRef = doc(db,"Reg",user1.uid);
-      getDoc(docRef).then((doc) =>
-      {
+      const docRef = doc(db,"Reg",user.uid);
+      if(docRef){
         const buttons = document.querySelectorAll(".button");
-        console.log(doc.data(),doc.id,user.uid);
-        if(doc.data()==undefined){
-            buttons.forEach(button => {
-              button.setAttribute('href','eventform.html');
-              });
-        }
-        else{
-            buttons.forEach(button => {
-              button.textContent = "View Pass";
-              button.setAttribute('href','passpage.html');
-              });
+        buttons.forEach(button => {
+          button.textContent = "View Pass";
+          button.setAttribute('href','passpage.html');
+        });
 
-              // Random ID on Screen
-              window.localStorage.PassId = doc.data().PassId;
-        }
+      // Random ID on Screen
+      let tokenDiv = document.querySelector(".token-number");
+      if(tokenDiv){
+          // Change token ID here
       }
-      )
+      }
     }
   })
 })

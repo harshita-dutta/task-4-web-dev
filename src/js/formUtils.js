@@ -2,12 +2,13 @@ import { initializeApp } from 'firebase/app'
 import {addDoc,doc, setDoc, collection,getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = initializeApp({
-    apiKey: "AIzaSyDub_7NQXQSjx6juNrfQCjM21M6IlNWuWM",
-  authDomain: "fireweb-2d408.firebaseapp.com",
-  projectId: "fireweb-2d408",
-  storageBucket: "fireweb-2d408.appspot.com",
-  messagingSenderId: "991930535994",
-  appId: "1:991930535994:web:29541a11f6b34641d52503"
+    apiKey: "AIzaSyB5dz82Olwh6Gezuw9GAsqIZesgOVTDCWg",
+    authDomain: "events-59546.firebaseapp.com",
+    projectId: "events-59546",
+    storageBucket: "events-59546.appspot.com",
+    messagingSenderId: "397686800845",
+    appId: "1:397686800845:web:2c6923eb39003f8d754484",
+    measurementId: "G-B6N0NF8RG1"
   });
 
 function rand() {
@@ -109,3 +110,5 @@ if(fallback){
         document.location.href = "mainpage.html"
     })
 }
+
+

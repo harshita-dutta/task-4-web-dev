@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="bannerStyle.css">
 </head>
 <body class="passpage">
-    <main class="main-pass">
+    <header>
+
+    </header>
+    <main>
         <div class="main-box">
             <div class="right-side">
                 <p>REGISTRATION<br>SUCCESSFUL</p>
@@ -26,13 +29,13 @@
                         <p>TOKEN<br>NUMBER</p>
                     </div>
 
-                    <div class="token-number" id="token">
+                    <div class="token-number">
                         <p>1234567890</p>
                     </div>
 
                 </div>
 
-                <div class="countdown timer">
+                <div class="countdown">
                     <p>22hr(s) : 10min(s) : 32sec</p>
                 </div>
 
@@ -44,10 +47,4 @@
         </div>
     </main>    
 </body>
-<script>
-let tokenDiv = document.getElementById("token");
-    if(tokenDiv){
-        tokenDiv.innerHTML = "<p>"+ window.localStorage.PassId+ "</p>";
-    }
-</script>
 </html>
