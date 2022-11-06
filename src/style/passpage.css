@@ -8,6 +8,7 @@
 }
 
 .main-pass{
+    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,8 +114,7 @@
 }
 
 .token-number p{
-    letter-spacing: 3px;
-    font-size: 18px;
+    letter-spacing: 5px;
 
 }
 
