@@ -109,6 +109,3 @@ if(fallback){
         document.location.href = "mainpage.html"
     })
 }
-
-
-
