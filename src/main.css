@@ -293,6 +293,20 @@ h3 {
     height: 70vh;
 
   }
+
+  .banner-box {
+    display: grid;
+    grid-template-columns: 100% 0%;
+    text-align: left;
+  }
+
+  .event-logo{
+    display: none;
+  }
+
+  .event-button{
+    margin-top: 2%;
+  }
 }
 
 footer{
