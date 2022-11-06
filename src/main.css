@@ -23,9 +23,14 @@ h1 {
 .signup {
   display: none;
 }
-
+nav{
+  background-color: #adb5bd;
+}
 nav li {
   margin-left: 10px;
+}
+nav span{
+  margin: 0 7px;
 }
 
 .carousel {
@@ -183,4 +188,13 @@ h3 {
 /* dark mode */
 .dark {
   background-color: #4c3575;
+}
+
+@media screen and (max-width: 768px) {
+    #first-content{
+        width: 80%;
+        left: 10%;
+        padding: 20px;
+    }
+  
 }

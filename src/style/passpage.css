@@ -8,7 +8,7 @@
 }
 
 .main-pass{
-    margin-top: 10%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,8 @@
 
 .main-box{
     /* border: solid 2px  rgb(197, 197, 197); */
+    margin-top: 10%;
+    margin-left:10%;
     border: 5px solid black;
     width: 80%;
     height: 50vh;
